@@ -1,0 +1,52 @@
+<div id="top">
+  {{#bs-navbar as |navbar|}}
+    <a href="/" class="navbar-brand"><div class="logo"></div></a>
+    {{navbar.toggle}}
+
+    {{#navbar.content}}
+      {{#navbar.nav class="ml-auto" as |nav| }} {{!-- margin left auto --}}
+        {{#nav.item}}{{#nav.link-to "home"}}Home{{/nav.link-to}}{{/nav.item}}
+
+        {{#bs-dropdown as |dd|}}
+          {{#dd.button class="navbar-button"}}Downloads{{/dd.button}}
+          {{#dd.menu class="navbar-menu" as |menu|}}
+            {{#menu.item}}
+              {{#menu.link-to "downloads.programs" class="downloads-menu-link"}}Programs{{/menu.link-to}}
+            {{/menu.item}}
+          {{/dd.menu}}
+        {{/bs-dropdown}}
+
+        {{#nav.item}}{{#nav.link-to "tutorials"}}Tutorials{{/nav.link-to}}{{/nav.item}}
+
+        {{#bs-dropdown as |dd|}}
+          {{#dd.button class="navbar-button"}}About{{/dd.button}}
+          {{#dd.menu class="navbar-menu" as |menu|}}
+            {{#menu.item}}
+              {{#menu.link-to "about-authors"}}Authors{{/menu.link-to}}
+            {{/menu.item}}
+
+            {{#menu.item}}
+              {{#menu.link-to "about-page"}}Page{{/menu.link-to}}
+            {{/menu.item}}
+          {{/dd.menu}}
+        {{/bs-dropdown}}
+
+        {{#nav.item class="outsider"}}{{#nav.link-to "settings"}}<span class="fas fa-cog"></span>{{/nav.link-to}}{{/nav.item}}
+      {{/navbar.nav}}
+    {{/navbar.content}}
+  {{/bs-navbar}}
+
+  {{outlet}}
+</div>
+
+<div id="footer">
+  <span id="liabilities">
+    {{#link-to "contact" class="contact"}}Contact{{/link-to}}
+    {{#link-to "imprint" class="imprint"}}Imprint{{/link-to}}
+    {{#link-to "privacy" class="privacy"}}Privacy{{/link-to}}
+  </span>
+
+  <span id="author">
+    Copyright &copy; 2019 Alexander Mattheis
+  </span>
+</div>
