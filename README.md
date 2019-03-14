@@ -1,4 +1,4 @@
-<img src="https://github.com/AlexanderMattheis/Bitcorn/blob/master/bitcorn_logo.png" width="256" height="93">
+<img src="https://github.com/AlexanderMattheis/bitcorn-client-v3-PREVIEW/blob/master/bitcorn_logo.png" width="256" height="93">
 
 # BITCORN
 The idea of Bitcorn is to create an interactive, 
